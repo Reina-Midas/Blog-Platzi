@@ -1,0 +1,350 @@
+:root {
+    --darkgray:#8d93ab;
+    --midlegray:#d6e0f0;
+    --hellgray:#f1f3f8;
+    --schwarz:#393b44;
+    --green:#67e6ca;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto Mono', monospace;
+}
+
+.home-body {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.grid-container {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+h3,
+p {
+    font-weight: bolder;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bolder;
+    display: inline;
+    color: black;
+}
+
+header {
+    width: 100%;
+    height: 8.75rem;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+header .header-icons-container {
+    width: 100%;
+    height: 3.125rem;
+    display: grid;
+    background-color: var(--green);
+}
+
+header .header-icons-container .icons {
+    width: 18.75rem;
+    height: auto;
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: end;/* MUY IMPORTANTE PARA ALINEAR AL FINAL*/
+    padding-right: 3.125rem;
+}
+
+header .icons span {
+    color: var(--hellgray);
+    font-weight: lighter;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height:5.625rem;
+    background-color: var(--midlegray)/*red;*/
+}
+
+nav .nav-logo-container {
+    margin-left: 3.125rem;
+}
+
+
+nav .nav-logo-container img {
+    width: 14rem;
+    margin-top: 1rem;
+}
+
+
+nav .profile-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 3.125rem;
+}
+
+nav .profile-link a {
+    color:var(--schwarz);
+    border-bottom: 2px solid var(--schwarz);
+}
+
+/*---------FIN DEL HEADER------------*/
+
+/*--------------MAIN-INDEX------------*/
+
+.home-main {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100%;
+    background-image: url('../assest/images/Cover.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-main section { /* con esto se le dice en que columna se quiere ubicar*/
+    display: grid;
+    grid-column: 2;
+    justify-items:center;
+    height: 21.875rem;
+    margin-top:5rem;
+}
+
+.home-main-text {
+    font-size: 30px;
+    font-weight: bolder;
+    letter-spacing: 0.9rem;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    color: var(--hellgray);
+    padding-top: 3.4rem;
+}
+
+.home-main-btn {
+    width: 8rem;
+    height: 4rem;
+    border-radius: 1rem;
+    border: 1px solid var(--green);
+    background-color: var(--green);
+    display: grid;
+    align-items: center;
+}
+.home-main-btn:hover {
+    background-color: rgb(14, 243, 232);
+}
+.home-main-btn a {
+    font-weight: bold;
+    font-size:1.1rem;
+}
+/*-----------FIN DEL MAIN INDEX------------*/
+
+
+/*----------POSTS PRINCIPAL-----------------*/
+/*-------Y---AGLOMERADOS DE POSTS-----------------*/
+
+.blogs-main {
+    display: grid;
+}
+
+.blogs-news-container {
+    margin-top: 3rem;
+    background-color: var(--hellgray);
+    padding: 0 3rem 2rem;
+}
+
+.blogs-main-new {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr;
+}
+
+
+.blogs-news-img-container {/*PARA LA FOTO*/
+    grid-column: 1;
+}
+
+.blogs-news-img-container img {/*PARA EL NUEVO POST*/
+    width: 80%;
+}
+
+.blogs-news-info-container {
+    grid-column: 2;
+    margin-top: -1.5rem;
+    padding-left: 0.5rem;
+}
+
+.blogs-news-info-container p {
+    margin-bottom: 2rem;
+}
+
+.blogs-post-container {
+    padding: 0 50px 40px;
+}
+
+.blogs-post-container h3 {
+    border-bottom: 3px solid var(--midlegray);
+    text-align: center;
+    padding-bottom: 2.3rem;
+    padding-top: 2.3rem;
+}
+
+.blogs-btn {
+    padding: 0.6rem 1rem;
+    border: 2px solid var(--green);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.blogs-btn:hover {
+    background-color: var(--green);
+}
+
+.blogs-post-container .post-container {
+display: inline-block;
+padding-left: 10px;
+max-width: 30%;
+margin-bottom: 50px;
+}
+
+.blogs-post-container .post-container p {
+    margin-bottom: 2.1rem;
+}
+
+.blogs-post-container .post-container img {
+    width: 100%;
+}
+
+/*----------FIN AGLOMERADOS DE POSTS-----------------*/
+/*----------FIN POSTS-----------------*/
+
+
+/*---------------MAIN-BLOG------------*/
+.blogpost-img-container {
+    padding:0 50px 40px ;
+}
+.blogpost-img-container img {
+    width: 100%; /* del la dimension del contenedor padre*/
+}
+
+.blogpost-main-container {
+    padding: 0 50px 40px;
+}
+
+.blogpost-main-container h3 {
+    border-bottom: 2px solid var(--darkgray);
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.blogpost-main-container article h1 {
+    font-weight: bolder;
+    font-size: 40px;
+}
+/*---------------FIN-MAIN-BLOG------------*/
+
+
+/*---------------CONTACT------------*/
+
+.contact-main-container {
+    width: 100%;
+    min-height: 250px;
+    background-color: var(--midlegray);
+    padding-bottom: 50px;
+    text-align: center;
+}
+.contact-main-container div {
+    display: inline-block;
+    width: 49%;
+    height: 100%;
+}
+.contact-main-container  div a {
+    border-bottom: 2px solid var(--schwarz);
+    padding-bottom: 5px;
+}
+
+.contact-main-container .contact-left, .contact-right {
+    text-align: initial;
+    margin-top: 85px;
+}
+.contact-main-container img {
+    width: 100px;
+}
+.contact-main-container p {
+    text-align: left;
+    padding-right: 30px;
+}
+/*---------------FIN-CONTACT------------*/
+
+/*---------------MAIN-PERFIL------------*/
+
+.profile-main-container {
+    padding: 70px 40px;
+    background-color: #e6e9ed;
+    margin-bottom: 50px;
+}
+.profile-main-container img {
+    width: 320px;
+    margin-right: 30px;
+}
+.profile-main-container .profile-container {
+    display: flex;
+}
+
+.profile-main-proyects {
+    padding: 0 50px 40px;
+}
+.profile-main-proyects h3 {
+    border-bottom: 1px solid var(--midlegray);
+    padding-bottom: 35px;
+    text-align: center;
+}
+.proyects-main-container {/* con esto se / en 3 columnas cad fr es una columna*/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.proyect-container {
+    padding: 0 5px;
+}
+.proyect-container h4 {
+    text-align: center;
+}
+.proyect-container p {
+    text-align: justify;
+    padding: 0 25px;
+}
+.proyect-container a {
+    padding-left: 25px;
+    text-decoration: none;
+    color: rgb(12, 206, 196);
+    font-size: 20px;
+}
+/*---------------FIN-MAIN-PERFIL------------*/
+
+
+/*------------FOOTER-----------------*/
+
+footer {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--schwarz);
+    border-top: 2.1rem solid var(--green);
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    margin-top: 2rem;
+    letter-spacing: 2;
+}
+
+/*----------FIN FOOTER-----------------*/
